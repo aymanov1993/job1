@@ -7,10 +7,8 @@ pipeline {
 			    script {
                     sh 'echo "job1"'
 			    }
+		    build job: 'job2', wait: false
             }
         }
-		stage("trigger full build") {
-        build job: 'job2', wait: false
-    }
     }
 }
