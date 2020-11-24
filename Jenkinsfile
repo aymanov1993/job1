@@ -9,5 +9,8 @@ pipeline {
 			    }
             }
         }
+		stage("trigger full build") {
+        build job: 'job2', wait: false
+    }
     }
 }
