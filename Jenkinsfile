@@ -8,6 +8,7 @@ pipeline {
                     sh 'echo "job1"'
 			    }
 		    build job: 'job2', wait: false
+		    sleep 60s
             }
         }
     }
